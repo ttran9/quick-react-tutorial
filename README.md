@@ -10,7 +10,12 @@
 # Notes for Video:
 
 - Video 1:
+
   - React isn't completely JavaScript.
   - There is use of transpilers that can compile down what we are writing down (mostly HTML, especially in this video) to JavaScript.
   - JSX: Extension that allows you to write HTML components in the middle of JavaScript.
   - Can import css file due to enhanced JS.
+
+- Video 2:
+  - Changing state will trigger React to need to render the page again.
+  - State will be used when you have a variable that is subject to change.
