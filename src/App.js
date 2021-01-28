@@ -3,30 +3,22 @@ import "./index.css";
 
 export default function App() {
 
-    const username = null; 
-    // const username = 'miguel';
-    const todos = [
-        'buy groceries',
-        'buy newspaper'
-    ]
-    // above is more "logic rather than presentation."
+    const [counter, setCounter] = React.useState(0);
+    // above is "logic rather than presentation."
+
+    const inc = () => { setCounter(counter + 1); }
+
+    const dec = () => { setCounter(counter - 1); }
 
     // below just generates presentation.
     return (
         <div className="App">
-            <h1>Part 1: Rendering</h1>
-            {username ?
-            <h2>Hello, {username} </h2>
-            :
-            <h2>Hello, Stranger</h2>
-            }
-            {username &&
-                <p>Logout</p>
-            }
-
-            <ul>
-                {todos.map(todo => <li>{todo}</li>)}
-            </ul>
+            <h1>Part 2: The State Hook</h1>
+            <p>Counter: {counter}</p>
+            <div>
+                <button onClick={inc}>+1</button>
+                <button onClick={dec}>-1</button>
+            </div>
         </div>
     )
 }
